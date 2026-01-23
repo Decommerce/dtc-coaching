@@ -1,0 +1,2549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DTC Founder Coaching | Decommerce</title>
+    <meta name="description" content="Strategic coaching for DTC founders. We're not an agency. We're founders who work with founders.">
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2216076458592536');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=2216076458592536&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Brand Colors */
+            --primary-cyan: #27D8F5;
+            --primary-purple: #9023F3;
+            --primary-magenta: #C534B5;
+            --accent-red: #E8344C;
+            --dark-navy: #00022D;
+            --medium-navy: #0D0D2B;
+            --light-lavender: #F3F0FA;
+            --light-pink: #FDEFF8;
+            --white: #FFFFFF;
+            --text-primary: #1A1A2E;
+            --text-secondary: #4A4A6A;
+            --text-muted: #7A7A9A;
+            --border-light: #E8E8F0;
+
+            /* Gradients */
+            --gradient-primary: linear-gradient(135deg, #9023F3 0%, #27D8F5 100%);
+            --gradient-accent: linear-gradient(135deg, #C534B5 0%, #9023F3 100%);
+            --gradient-hero: linear-gradient(180deg, #F8F6FF 0%, #FFFFFF 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--white);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--text-primary);
+        }
+
+        h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            font-weight: 700;
+            letter-spacing: -0.01em;
+        }
+
+        h3 {
+            font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+            font-weight: 600;
+        }
+
+        p {
+            color: var(--text-secondary);
+            font-size: 1.125rem;
+            line-height: 1.7;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .container-narrow {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header / Nav */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-light);
+            z-index: 1000;
+            padding: 16px 0;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-inner .btn {
+            flex-shrink: 0;
+            width: auto;
+        }
+
+        .logo {
+            height: 32px;
+            width: auto;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 14px 28px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: var(--white);
+            box-shadow: 0 4px 14px rgba(144, 35, 243, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(144, 35, 243, 0.4);
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--primary-purple);
+            border: 2px solid var(--primary-purple);
+        }
+
+        .btn-secondary:hover {
+            background: var(--light-lavender);
+        }
+
+        .btn-small {
+            padding: 10px 20px;
+            font-size: 0.875rem;
+        }
+
+        .btn-large {
+            padding: 18px 36px;
+            font-size: 1.125rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 140px 0 80px;
+            background: var(--gradient-hero);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(144, 35, 243, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(39, 216, 245, 0.06) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            margin-bottom: 20px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Video Section */
+        .video-wrapper {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            background: var(--dark-navy);
+            aspect-ratio: 16/9;
+            cursor: pointer;
+        }
+
+        .video-thumbnail {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .video-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--dark-navy) 0%, var(--medium-navy) 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+        }
+
+        .play-button {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 8px 30px rgba(144, 35, 243, 0.4);
+        }
+
+        .video-wrapper:hover .play-button {
+            transform: scale(1.1);
+            box-shadow: 0 12px 40px rgba(144, 35, 243, 0.5);
+        }
+
+        .play-button svg {
+            width: 32px;
+            height: 32px;
+            fill: var(--white);
+            margin-left: 4px;
+        }
+
+        .video-text {
+            font-size: 0.875rem;
+            opacity: 0.8;
+        }
+
+        .hero-description {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-founders {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+        }
+
+        .hero-founders strong {
+            color: var(--text-primary);
+        }
+
+        .hero-tagline {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--primary-purple);
+            margin-bottom: 24px;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .cta-subtext {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+
+        /* Social Proof Strip */
+        .social-proof {
+            padding: 48px 0;
+            background: var(--white);
+            border-top: 1px solid var(--border-light);
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .social-proof-title {
+            text-align: center;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 32px;
+        }
+
+        .logo-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 48px 60px;
+        }
+
+        .logo-item {
+            height: 48px;
+            width: auto;
+            max-width: 140px;
+            object-fit: contain;
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+
+        .logo-item:hover {
+            opacity: 1;
+        }
+
+        .logo-placeholder {
+            padding: 12px 24px;
+            background: var(--light-lavender);
+            border-radius: 8px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--text-muted);
+        }
+
+        /* Problem Section */
+        .problem-section {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-eyebrow {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--primary-purple);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 16px;
+        }
+
+        .section-header h2 {
+            margin-bottom: 20px;
+        }
+
+        .section-header p {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .problem-list {
+            max-width: 800px;
+            margin: 0 auto 48px;
+        }
+
+        .problem-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .problem-item:last-child {
+            border-bottom: none;
+        }
+
+        .problem-icon {
+            flex-shrink: 0;
+            width: 24px;
+            height: 24px;
+            background: linear-gradient(135deg, #FFE5E5 0%, #FFF0E5 100%);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2px;
+        }
+
+        .problem-icon svg {
+            width: 14px;
+            height: 14px;
+            stroke: var(--accent-red);
+        }
+
+        .problem-item p {
+            font-size: 1.0625rem;
+            color: var(--text-secondary);
+            margin: 0;
+        }
+
+        .problem-conclusion {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px;
+            background: var(--light-lavender);
+            border-radius: 16px;
+        }
+
+        .problem-conclusion p {
+            font-size: 1.125rem;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .problem-conclusion p:last-child {
+            font-weight: 600;
+            color: var(--primary-purple);
+            margin-bottom: 0;
+        }
+
+        /* Founders Section */
+        .founders-section {
+            padding: 100px 0;
+            background: linear-gradient(180deg, #F8F6FF 0%, #FFFFFF 100%);
+        }
+
+        .founders-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .founders-text h2 {
+            margin-bottom: 24px;
+        }
+
+        .founders-text .highlight {
+            color: var(--primary-purple);
+        }
+
+        .founders-text > p {
+            margin-bottom: 24px;
+        }
+
+        .founders-points {
+            margin-bottom: 32px;
+        }
+
+        .founders-point {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .founders-point-icon {
+            flex-shrink: 0;
+            width: 24px;
+            height: 24px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2px;
+        }
+
+        .founders-point-icon svg {
+            width: 14px;
+            height: 14px;
+            stroke: var(--white);
+            stroke-width: 3;
+        }
+
+        .founders-point p {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            margin: 0;
+        }
+
+        .founders-callout {
+            padding: 24px;
+            background: var(--white);
+            border-radius: 12px;
+            border-left: 4px solid var(--primary-purple);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .founders-callout p {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            margin: 0;
+            line-height: 1.7;
+        }
+
+        .founders-image {
+            position: relative;
+        }
+
+        .founders-collage {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto auto auto;
+            gap: 8px;
+            width: 100%;
+        }
+
+        .founders-collage img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .founders-collage .main-photo {
+            grid-column: 1 / 3;
+            grid-row: 1 / 3;
+            aspect-ratio: 1;
+        }
+
+        .founders-collage .small-photo {
+            aspect-ratio: 1;
+        }
+
+        .founders-collage .small-photo:nth-child(2) {
+            grid-column: 3;
+            grid-row: 1;
+        }
+
+        .founders-collage .small-photo:nth-child(3) {
+            grid-column: 3;
+            grid-row: 2;
+        }
+
+        .founders-image-decoration {
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            width: 100px;
+            height: 100px;
+            background: var(--primary-cyan);
+            opacity: 0.2;
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        /* What You Get Section */
+        .benefits-section {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+            margin-bottom: 48px;
+        }
+
+        .benefit-card {
+            padding: 32px;
+            background: var(--white);
+            border-radius: 16px;
+            border: 1px solid var(--border-light);
+            transition: all 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            border-color: var(--primary-purple);
+            box-shadow: 0 8px 30px rgba(144, 35, 243, 0.1);
+            transform: translateY(-4px);
+        }
+
+        .benefit-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--light-lavender);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .benefit-icon svg {
+            width: 24px;
+            height: 24px;
+            stroke: var(--primary-purple);
+        }
+
+        .benefit-card h3 {
+            margin-bottom: 12px;
+            font-size: 1.25rem;
+        }
+
+        .benefit-card p {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            margin: 0;
+        }
+
+        .benefits-cta {
+            text-align: center;
+        }
+
+        /* Why Us Section */
+        .why-us-section {
+            padding: 100px 0;
+            background: var(--dark-navy);
+            color: var(--white);
+        }
+
+        .why-us-section h2 {
+            color: var(--white);
+            text-align: center;
+            margin-bottom: 16px;
+        }
+
+        .why-us-subtitle {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.25rem;
+            margin-bottom: 60px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            margin-bottom: 60px;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 32px 24px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 0.9375rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .why-us-content {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .why-us-content p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.125rem;
+            margin-bottom: 24px;
+        }
+
+        .why-us-content p:last-of-type {
+            margin-bottom: 0;
+        }
+
+        /* How It Works Section */
+        .how-section {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .how-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .how-intro {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .how-intro p {
+            font-size: 1.125rem;
+        }
+
+        .how-list {
+            margin-bottom: 48px;
+        }
+
+        .how-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 24px 0;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .how-item:last-child {
+            border-bottom: none;
+        }
+
+        .how-icon {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            background: var(--gradient-primary);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .how-icon svg {
+            width: 20px;
+            height: 20px;
+            stroke: var(--white);
+        }
+
+        .how-item h4 {
+            font-size: 1.125rem;
+            margin-bottom: 4px;
+        }
+
+        .how-item p {
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        .how-note {
+            text-align: center;
+            padding: 24px;
+            background: var(--light-lavender);
+            border-radius: 12px;
+        }
+
+        .how-note p {
+            font-size: 1rem;
+            color: var(--text-primary);
+            margin: 0;
+        }
+
+        /* Pricing Section */
+        .pricing-section {
+            padding: 100px 0;
+            background: linear-gradient(180deg, #F8F6FF 0%, #FFFFFF 100%);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+            max-width: 900px;
+            margin: 0 auto 48px;
+        }
+
+        .pricing-card {
+            padding: 40px;
+            background: var(--white);
+            border-radius: 20px;
+            border: 2px solid var(--border-light);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            border-color: var(--primary-purple);
+            box-shadow: 0 12px 40px rgba(144, 35, 243, 0.15);
+        }
+
+        .pricing-card.featured {
+            border-color: var(--primary-purple);
+            box-shadow: 0 8px 30px rgba(144, 35, 243, 0.15);
+        }
+
+        .pricing-card.featured::before {
+            content: 'Most Popular';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gradient-primary);
+            color: var(--white);
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 6px 16px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .pricing-eyebrow {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--primary-purple);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 8px;
+        }
+
+        .pricing-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+
+        .pricing-subtitle {
+            font-size: 0.9375rem;
+            color: var(--text-muted);
+            margin-bottom: 24px;
+        }
+
+        .pricing-price {
+            margin-bottom: 8px;
+        }
+
+        .pricing-amount {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--text-primary);
+        }
+
+        .pricing-period {
+            font-size: 1rem;
+            color: var(--text-muted);
+        }
+
+        .pricing-commitment {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            margin-bottom: 24px;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 32px;
+        }
+
+        .pricing-features li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 10px 0;
+            font-size: 0.9375rem;
+            color: var(--text-secondary);
+        }
+
+        .pricing-features li svg {
+            flex-shrink: 0;
+            width: 18px;
+            height: 18px;
+            stroke: var(--primary-purple);
+            margin-top: 2px;
+        }
+
+        .pricing-best-for {
+            padding: 16px;
+            background: var(--light-lavender);
+            border-radius: 10px;
+            margin-bottom: 24px;
+        }
+
+        .pricing-best-for p {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            margin: 0;
+        }
+
+        .pricing-best-for strong {
+            color: var(--text-primary);
+        }
+
+        .pricing-card .btn {
+            width: 100%;
+        }
+
+        .pricing-notes {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .pricing-notes h4 {
+            font-size: 1rem;
+            margin-bottom: 16px;
+            color: var(--text-muted);
+        }
+
+        .pricing-notes ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 24px;
+        }
+
+        .pricing-notes li {
+            font-size: 0.9375rem;
+            color: var(--text-secondary);
+        }
+
+        /* Testimonials Section */
+        .testimonials-section {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+        }
+
+        .testimonial-card {
+            padding: 32px;
+            background: var(--white);
+            border-radius: 16px;
+            border: 1px solid var(--border-light);
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            left: 24px;
+            font-size: 4rem;
+            font-weight: 800;
+            color: var(--light-lavender);
+            line-height: 1;
+        }
+
+        .testimonial-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-content p {
+            font-size: 1.0625rem;
+            font-style: italic;
+            color: var(--text-primary);
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .testimonial-author {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--primary-purple);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 100px 0;
+            background: var(--light-lavender);
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            padding: 28px;
+            background: var(--white);
+            border-radius: 12px;
+        }
+
+        .faq-item h4 {
+            font-size: 1.0625rem;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+
+        .faq-item p {
+            font-size: 0.9375rem;
+            color: var(--text-secondary);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* Final CTA Section */
+        .final-cta-section {
+            padding: 100px 0;
+            background: var(--dark-navy);
+            text-align: center;
+        }
+
+        .final-cta-section h2 {
+            color: var(--white);
+            margin-bottom: 16px;
+        }
+
+        .final-cta-subtitle {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.25rem;
+            margin-bottom: 40px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .final-cta-section .btn-primary {
+            margin-bottom: 24px;
+        }
+
+        .final-cta-tagline {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 1rem;
+            margin-bottom: 8px;
+        }
+
+        .final-cta-tagline strong {
+            color: var(--primary-cyan);
+        }
+
+        /* Footer */
+        .footer {
+            padding: 40px 0;
+            background: var(--medium-navy);
+            text-align: center;
+        }
+
+        .footer p {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.875rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 1024px) {
+            .founders-content {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+
+            .founders-image {
+                order: -1;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 10px 0;
+            }
+
+            .header-inner {
+                gap: 12px;
+            }
+
+            .logo-text img {
+                height: 28px !important;
+            }
+
+            .btn-small {
+                padding: 6px 10px;
+                font-size: 0.6875rem;
+                white-space: nowrap;
+            }
+
+            .header .btn-small {
+                padding: 6px 12px;
+                font-size: 0.6875rem;
+                border-radius: 6px;
+                width: auto !important;
+                max-width: none !important;
+                flex-shrink: 0;
+            }
+
+            .hero {
+                padding: 90px 0 50px;
+            }
+
+            h1 {
+                font-size: 1.75rem;
+                line-height: 1.25;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .hero-description,
+            .hero-founders {
+                font-size: 1rem;
+            }
+
+            .hero-tagline {
+                font-size: 1rem;
+            }
+
+            .video-wrapper {
+                margin-bottom: 28px;
+                border-radius: 12px;
+            }
+
+            .play-button {
+                width: 60px;
+                height: 60px;
+            }
+
+            .play-button svg {
+                width: 22px;
+                height: 22px;
+            }
+
+            .logo-grid {
+                gap: 24px 32px;
+            }
+
+            .logo-item {
+                height: 36px;
+                max-width: 100px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 16px;
+            }
+
+            .stat-card {
+                padding: 20px 12px;
+            }
+
+            .stat-number {
+                font-size: 1.75rem;
+            }
+
+            .stat-label {
+                font-size: 0.8125rem;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .btn-large {
+                padding: 14px 24px;
+                font-size: 0.9375rem;
+                width: 100%;
+            }
+
+            .btn-primary {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .section-header {
+                margin-bottom: 32px;
+            }
+
+            .section-eyebrow {
+                font-size: 0.75rem;
+            }
+
+            .problem-section,
+            .founders-section,
+            .benefits-section,
+            .how-section,
+            .pricing-section,
+            .testimonials-section,
+            .faq-section,
+            .final-cta-section {
+                padding: 50px 0;
+            }
+
+            .problem-item {
+                padding: 16px 0;
+            }
+
+            .problem-item p {
+                font-size: 0.9375rem;
+            }
+
+            .founders-callout {
+                padding: 20px;
+            }
+
+            .founders-point p {
+                font-size: 0.9375rem;
+            }
+
+            .benefit-card h3 {
+                font-size: 1.125rem;
+            }
+
+            .benefit-card p {
+                font-size: 0.9375rem;
+            }
+
+            .how-item h4 {
+                font-size: 1rem;
+            }
+
+            .how-item p {
+                font-size: 0.9375rem;
+            }
+
+            .pricing-card {
+                padding: 24px;
+            }
+
+            .pricing-card h3 {
+                font-size: 1.25rem;
+            }
+
+            .pricing-features li {
+                font-size: 0.875rem;
+            }
+
+            .testimonial-card {
+                padding: 24px;
+            }
+
+            .testimonial-content p {
+                font-size: 0.9375rem;
+            }
+
+            .faq-item h4 {
+                font-size: 1rem;
+            }
+
+            .faq-item p {
+                font-size: 0.875rem;
+            }
+
+            .final-cta-subtitle {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 16px;
+            }
+
+            .header-inner {
+                gap: 8px;
+            }
+
+            .logo-text img {
+                height: 24px !important;
+            }
+
+            .btn-small {
+                padding: 4px 8px;
+                font-size: 0.5625rem;
+            }
+
+            .header .btn-small {
+                padding: 5px 10px;
+                font-size: 0.625rem;
+                border-radius: 4px;
+                width: auto !important;
+                max-width: none !important;
+                flex-shrink: 0;
+            }
+
+            .hero {
+                padding: 80px 0 40px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.25rem;
+            }
+
+            .hero-subtitle {
+                font-size: 0.9375rem;
+            }
+
+            .social-proof {
+                padding: 28px 0;
+            }
+
+            .social-proof-title {
+                font-size: 0.75rem;
+                margin-bottom: 24px;
+            }
+
+            .logo-grid {
+                gap: 20px 24px;
+            }
+
+            .logo-item {
+                height: 28px;
+                max-width: 80px;
+            }
+
+            .stats-grid {
+                gap: 12px;
+            }
+
+            .stat-number {
+                font-size: 1.5rem;
+            }
+
+            .pricing-card {
+                padding: 20px;
+            }
+
+            .pricing-amount {
+                font-size: 1.75rem;
+            }
+
+            .benefit-card {
+                padding: 20px;
+            }
+
+            .faq-item {
+                padding: 16px;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        /* Utility Classes */
+        .text-center {
+            text-align: center;
+        }
+
+        .mb-0 {
+            margin-bottom: 0;
+        }
+
+        .mb-16 {
+            margin-bottom: 16px;
+        }
+
+        .mb-24 {
+            margin-bottom: 24px;
+        }
+
+        .mb-32 {
+            margin-bottom: 32px;
+        }
+
+        .mb-48 {
+            margin-bottom: 48px;
+        }
+
+        /* Header scroll behavior */
+        .header {
+            transition: transform 0.3s ease;
+        }
+
+        .header.header-hidden {
+            transform: translateY(-100%);
+        }
+
+        /* Exit Intent Popup */
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 2, 45, 0.85);
+            z-index: 10000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .popup-overlay.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .popup-container {
+            background: var(--white);
+            border-radius: 20px;
+            max-width: 500px;
+            width: 100%;
+            padding: 48px 40px;
+            position: relative;
+            transform: translateY(20px);
+            transition: transform 0.3s ease;
+            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.3);
+        }
+
+        .popup-overlay.active .popup-container {
+            transform: translateY(0);
+        }
+
+        .popup-close {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            width: 36px;
+            height: 36px;
+            background: var(--light-lavender);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+        }
+
+        .popup-close:hover {
+            background: var(--border-light);
+        }
+
+        .popup-close svg {
+            width: 18px;
+            height: 18px;
+            stroke: var(--text-secondary);
+        }
+
+        .popup-icon {
+            width: 64px;
+            height: 64px;
+            background: var(--gradient-primary);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+        }
+
+        .popup-icon svg {
+            width: 32px;
+            height: 32px;
+            stroke: var(--white);
+        }
+
+        .popup-title {
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            text-align: center;
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+
+        .popup-subtitle {
+            font-size: 1.0625rem;
+            color: var(--text-secondary);
+            text-align: center;
+            margin-bottom: 32px;
+            line-height: 1.6;
+        }
+
+        .popup-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            margin-bottom: 28px;
+        }
+
+        .popup-feature {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            background: var(--light-lavender);
+            padding: 6px 12px;
+            border-radius: 20px;
+        }
+
+        .popup-feature svg {
+            width: 14px;
+            height: 14px;
+            stroke: var(--primary-purple);
+        }
+
+        .popup-form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .popup-form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .popup-input {
+            width: 100%;
+            padding: 14px 16px;
+            font-size: 1rem;
+            font-family: inherit;
+            border: 2px solid var(--border-light);
+            border-radius: 10px;
+            background: var(--white);
+            color: var(--text-primary);
+            transition: all 0.2s ease;
+        }
+
+        .popup-input:focus {
+            outline: none;
+            border-color: var(--primary-purple);
+            box-shadow: 0 0 0 3px rgba(144, 35, 243, 0.1);
+        }
+
+        .popup-input::placeholder {
+            color: var(--text-muted);
+        }
+
+        .popup-submit {
+            width: 100%;
+            padding: 16px 24px;
+            font-size: 1rem;
+            font-weight: 600;
+            font-family: inherit;
+            background: var(--gradient-primary);
+            color: var(--white);
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 14px rgba(144, 35, 243, 0.3);
+        }
+
+        .popup-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(144, 35, 243, 0.4);
+        }
+
+        .popup-submit:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .popup-privacy {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-align: center;
+            margin-top: 8px;
+        }
+
+        .popup-success {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .popup-success-icon {
+            width: 72px;
+            height: 72px;
+            background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+
+        .popup-success-icon svg {
+            width: 36px;
+            height: 36px;
+            stroke: #4CAF50;
+        }
+
+        .popup-success h3 {
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+        }
+
+        .popup-success p {
+            font-size: 1rem;
+            color: var(--text-secondary);
+        }
+
+        @media (max-width: 480px) {
+            .popup-container {
+                padding: 36px 24px;
+            }
+
+            .popup-title {
+                font-size: 1.5rem;
+            }
+
+            .popup-subtitle {
+                font-size: 1rem;
+            }
+
+            .popup-form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .popup-features {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="#" class="logo-text">
+                    <img src="logos/decommerce.png" alt="Decommerce" style="height: 40px; width: auto;">
+                </a>
+                <a href="https://calendly.com/roy-bernheim-decommerce/meeting-15-minutes" onclick="fbq('track', 'Lead');" class="btn btn-primary btn-small">Book a Call</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Your DTC channel should be a machine by now.</h1>
+                <p class="hero-subtitle">Instead, it's still not moving at the pace you want. And it's probably costing you more than you realize.</p>
+
+                <!-- Video Player -->
+                <div class="video-wrapper">
+                    <iframe
+                        id="youtube-player"
+                        src="https://www.youtube.com/embed/GF-jh4vQZYs"
+                        title="Your DTC channel should be a machine by now"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                    </iframe>
+                </div>
+
+                <p class="hero-description">Customers like your product. You're spending aggressively. But CAC keeps rising, repeat rate is flat, and every agency call sounds the same.</p>
+
+                <p class="hero-founders">We're <strong>Roy and Allan</strong>, founders who scaled a DTC brand from $0 to $3M+ in 2 years, shipped to 120 countries, built our own e-commerce software, and now work with founders who want their growth engine to actually work.</p>
+
+                <p class="hero-tagline">We're not an agency. We're founders who work with founders.</p>
+
+                <div class="hero-cta-group">
+                    <a href="https://calendly.com/roy-bernheim-decommerce/meeting-15-minutes" onclick="fbq('track', 'Lead');" class="btn btn-primary btn-large">Book a 15-Minute Call</a>
+                    <span class="cta-subtext">No pitch. Just a conversation about where you're stuck.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Strip -->
+    <section class="social-proof">
+        <div class="container">
+            <p class="social-proof-title">Worked with brands like</p>
+            <div class="logo-grid">
+                <img src="logos/mercedes-benz-official.svg" alt="Mercedes-Benz" class="logo-item">
+                <img src="logos/Logo_Breitling_2018_1884_P.png" alt="Breitling" class="logo-item">
+                <img src="logos/jagermeister.avif" alt="Jägermeister" class="logo-item">
+                <img src="logos/louis-xvi-official.svg" alt="Louis XVI" class="logo-item">
+                <img src="logos/thalia-official.svg" alt="Thalia" class="logo-item">
+                <img src="logos/sihf.avif" alt="SIHF" class="logo-item">
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-eyebrow">Does this sound familiar?</p>
+                <h2>Most 7-figure founders we speak to recognize this instantly:</h2>
+            </div>
+
+            <div class="problem-list">
+                <div class="problem-item">
+                    <div class="problem-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                        </svg>
+                    </div>
+                    <p>You're paying $10K to $20K+ per month to agencies, and still translating their reports yourself</p>
+                </div>
+                <div class="problem-item">
+                    <div class="problem-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                        </svg>
+                    </div>
+                    <p>Every miss is blamed on "testing" or "the algorithm"</p>
+                </div>
+                <div class="problem-item">
+                    <div class="problem-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                        </svg>
+                    </div>
+                    <p>Customers buy once, leave great reviews, then disappear</p>
+                </div>
+                <div class="problem-item">
+                    <div class="problem-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                        </svg>
+                    </div>
+                    <p>CAC is up, margins are tight, LTV is flat</p>
+                </div>
+                <div class="problem-item">
+                    <div class="problem-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                        </svg>
+                    </div>
+                    <p>AI is everywhere, but no one can clearly tell you what matters for your size</p>
+                </div>
+                <div class="problem-item">
+                    <div class="problem-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                        </svg>
+                    </div>
+                    <p>International expansion has been "next quarter" for over a year</p>
+                </div>
+                <div class="problem-item">
+                    <div class="problem-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+                        </svg>
+                    </div>
+                    <p>You don't have time for another course. You need answers now</p>
+                </div>
+            </div>
+
+            <div class="problem-conclusion">
+                <p>This isn't because you're doing something wrong.</p>
+                <p>It's because no one is challenging the system you're operating in.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founders Section -->
+    <section class="founders-section">
+        <div class="container">
+            <div class="founders-content">
+                <div class="founders-text">
+                    <p class="section-eyebrow">Founders for Founders</p>
+                    <h2>We're not an agency. <span class="highlight">We're founders who have been in your seat.</span></h2>
+                    <p>We don't bill hours. We don't sell retainers. We're founders who have built and scaled DTC brands ourselves, and now work alongside a small number of founders who want to do the same.</p>
+
+                    <p><strong>Think of us as the sparring partner you don't have:</strong></p>
+
+                    <div class="founders-points">
+                        <div class="founders-point">
+                            <div class="founders-point-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                            </div>
+                            <p>Already made the expensive mistakes</p>
+                        </div>
+                        <div class="founders-point">
+                            <div class="founders-point-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                            </div>
+                            <p>Knows what's working right now because we're still in the game</p>
+                        </div>
+                        <div class="founders-point">
+                            <div class="founders-point-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                            </div>
+                            <p>Challenges assumptions before they cost six months and six figures</p>
+                        </div>
+                    </div>
+
+                    <div class="founders-callout">
+                        <p>Your agencies want to keep the account. Your team doesn't want to rock the boat. Your peers are being polite. <strong>We don't have those incentives.</strong></p>
+                    </div>
+                </div>
+
+                <div class="founders-image">
+                    <div class="founders-collage">
+                        <img src="images/20251219_143445.jpg" alt="Roy and Allan at Palais Federal Bern" class="main-photo">
+                        <img src="images/IMG-20210727-WA0061.jpg" alt="Roy and Allan at TBô Concept Store" class="small-photo">
+                        <img src="images/20250429_192829.jpg" alt="Roy and Allan in Dubai" class="small-photo">
+                        <img src="images/20250125_151233.jpg" alt="Roy and Allan at the beach" class="small-photo">
+                        <img src="images/20250429_074640.jpg" alt="Roy and Allan selfie" class="small-photo">
+                        <img src="images/Screenshot_20220603-175854.jpg" alt="Roy and Allan with friend" class="small-photo">
+                    </div>
+                    <div class="founders-image-decoration"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-eyebrow">What Working Together Actually Looks Like</p>
+                <h2>We don't just answer questions. We challenge the questions you're asking.</h2>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3>Clarity on Priorities</h3>
+                    <p>You have 47 things on your list. We identify the 3 that actually move the needle.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                        </svg>
+                    </div>
+                    <h3>Strategy Stress Testing</h3>
+                    <p>We poke holes in assumptions and call out bad ideas before they get expensive.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                        </svg>
+                    </div>
+                    <h3>Agency Accountability</h3>
+                    <p>Know exactly what to ask, how to read reports, and when to push or walk away.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                        </svg>
+                    </div>
+                    <h3>Real Benchmarks</h3>
+                    <p>Not outdated industry averages. Actual data from brands operating today.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <h3>AI Without the Noise</h3>
+                    <p>What to use, how to configure it, and what to ignore.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                    </div>
+                    <h3>Frameworks & Templates</h3>
+                    <p>Copy and paste ready. The same playbooks we use ourselves.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3>International Expansion Support</h3>
+                    <p>Logistics, pricing, taxes, partners. We shipped to 120 countries in year one.</p>
+                </div>
+
+                <div class="benefit-card" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: var(--light-lavender);">
+                    <p style="font-size: 1.125rem; color: var(--text-primary); margin-bottom: 16px;">See if this makes sense for where you are right now.</p>
+                    <a href="https://calendly.com/roy-bernheim-decommerce/meeting-15-minutes" onclick="fbq('track', 'Lead');" class="btn btn-primary">Book a 15-Minute Call</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section class="why-us-section">
+        <div class="container">
+            <h2>Why Us</h2>
+            <p class="why-us-subtitle">We've done this ourselves.</p>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">$3M+</div>
+                    <div class="stat-label">TBô: $0 to $3M+ in two years</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">400K+</div>
+                    <div class="stat-label">Customers served</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">40%+</div>
+                    <div class="stat-label">Repeat rate vs 11% industry average</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">120+</div>
+                    <div class="stat-label">Countries shipped to in year one</div>
+                </div>
+            </div>
+
+            <div class="why-us-content">
+                <p>When the tools didn't exist, we built them. That became Decommerce.</p>
+                <p>Today, we advise founder-led brands and global operators who don't need basic advice. They need clear thinking and leverage.</p>
+                <p>We've hired and fired agencies. Worked with Meta, Google, and TikTok. Tested hundreds of tools and vendors.</p>
+                <p><strong style="color: var(--primary-cyan);">So when someone pitches you something, we can tell you if it's worth it.</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-eyebrow">How the Engagement Works</p>
+                <h2>This isn't a course. It's a coaching partnership.</h2>
+            </div>
+
+            <div class="how-content">
+                <div class="how-list">
+                    <div class="how-item">
+                        <div class="how-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Two Strategy Calls per Month</h4>
+                            <p>Focused on what's most urgent for your business.</p>
+                        </div>
+                    </div>
+                    <div class="how-item">
+                        <div class="how-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Direct Slack Access</h4>
+                            <p>Real-time questions answered when you need them.</p>
+                        </div>
+                    </div>
+                    <div class="how-item">
+                        <div class="how-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Frameworks, Tools & Benchmarks</h4>
+                            <p>Relevant to your stage. Not generic advice.</p>
+                        </div>
+                    </div>
+                    <div class="how-item">
+                        <div class="how-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Agency Sparring</h4>
+                            <p>Before and after key calls, so you know what to push on.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="how-note">
+                    <p><strong>There's a 3-month minimum.</strong> This is about building an engine, not applying a quick fix.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-eyebrow">The Engagement Options</p>
+                <h2>We work with a small number of founders at a time.</h2>
+                <p>This isn't a program you join. It's a partnership we agree to.</p>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="pricing-card featured">
+                    <p class="pricing-eyebrow">Option 1</p>
+                    <h3>DTC Command Center</h3>
+                    <p class="pricing-subtitle">Ongoing Coaching Partnership</p>
+                    <div class="pricing-price">
+                        <span class="pricing-amount">$4,500</span>
+                        <span class="pricing-period">per month</span>
+                    </div>
+                    <p class="pricing-commitment">3-month minimum commitment</p>
+                    <ul class="pricing-features">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Two 60-minute strategy calls per month
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Direct Slack access for async questions
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Focus on your most urgent constraints
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Agency challenge and accountability support
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Proven frameworks, templates, and tools
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Real benchmarks from brands at your stage
+                        </li>
+                    </ul>
+                    <div class="pricing-best-for">
+                        <p><strong>Best for:</strong> Founders who want a long-term sparring partner while continuing to operate their business.</p>
+                    </div>
+                    <a href="https://calendly.com/roy-bernheim-decommerce/meeting-15-minutes" onclick="fbq('track', 'Lead');" class="btn btn-primary">Book a Call</a>
+                </div>
+
+                <div class="pricing-card">
+                    <p class="pricing-eyebrow">Option 2</p>
+                    <h3>Founder Accelerator</h3>
+                    <p class="pricing-subtitle">90-Day Intensive</p>
+                    <div class="pricing-price">
+                        <span class="pricing-amount">$10,000</span>
+                        <span class="pricing-period">one-time</span>
+                    </div>
+                    <p class="pricing-commitment">90-day engagement</p>
+                    <ul class="pricing-features">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Deep audit of your DTC engine
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Retention, agency performance & sequencing review
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Four deep-dive strategy sessions
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Custom retention and prioritization playbook
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Support on agency decisions, RFPs, or renegotiation
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                            Full Slack access during the engagement
+                        </li>
+                    </ul>
+                    <div class="pricing-best-for">
+                        <p><strong>Best for:</strong> Founders who want concentrated momentum and a clear operating plan for the next phase.</p>
+                    </div>
+                    <a href="https://calendly.com/roy-bernheim-decommerce/meeting-15-minutes" onclick="fbq('track', 'Lead');" class="btn btn-secondary">Book a Call</a>
+                </div>
+            </div>
+
+            <div class="pricing-notes">
+                <h4>Important Notes</h4>
+                <ul>
+                    <li>We don't offer hourly billing</li>
+                    <li>We don't execute work for you</li>
+                    <li>We work with a limited number of brands at once</li>
+                </ul>
+                <p style="margin-top: 16px; font-size: 0.9375rem;">The value comes from clarity, pressure testing, and better decisions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-eyebrow">What Founders Say</p>
+                <h2>We work with a small number of founder-led brands.</h2>
+                <p>Here's what they tell us.</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"This was the first time someone actually challenged our thinking instead of validating it. Within weeks, we killed initiatives that were wasting time and doubled down on what moved revenue."</p>
+                        <span class="testimonial-author">- Founder, DTC Brand</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"We finally understood what our agencies were doing, and more importantly, what they weren't doing. The clarity alone paid for itself."</p>
+                        <span class="testimonial-author">- CEO, International DTC Brand</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"It feels less like coaching and more like having a co-founder who has already made the mistakes we were about to make."</p>
+                        <span class="testimonial-author">- Founder, Luxury Consumer Brand</span>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"The biggest value was focus. We stopped reacting and started sequencing."</p>
+                        <span class="testimonial-author">- Founder, Multi-country DTC Brand</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-eyebrow">FAQ</p>
+                <h2>Frequently Asked Questions</h2>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>Is this an agency or consulting service?</h4>
+                    <p>No. We don't execute campaigns or manage channels. We work as strategic sparring partners.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Will you replace our existing agencies?</h4>
+                    <p>Usually no. We help founders get more value from existing agencies, or decide confidently when it's time to change them.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Is this done-for-you?</h4>
+                    <p>No. We guide and challenge. You and your team execute.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>How is this different from a course or mastermind?</h4>
+                    <p>There's no curriculum. Everything is applied to your specific business and numbers.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>How much time does this require?</h4>
+                    <p>Two strategy calls per month plus async questions as needed.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>What happens on the 15-minute call?</h4>
+                    <p>We discuss where you're stuck and whether working together makes sense. If it doesn't, we'll tell you.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Do you work with every brand that applies?</h4>
+                    <p>No. We only work with founders where we believe we can create meaningful leverage.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta-section">
+        <div class="container">
+            <h2>Ready to stop guessing?</h2>
+            <p class="final-cta-subtitle">15 minutes. No pitch. Just a conversation about where you're stuck and whether we can help.</p>
+            <a href="https://calendly.com/roy-bernheim-decommerce/meeting-15-minutes" onclick="fbq('track', 'Lead');" class="btn btn-primary btn-large">Book Your 15-Minute Call</a>
+            <p class="final-cta-tagline">We're not an agency. <strong>We're founders who work with founders.</strong></p>
+            <p class="final-cta-tagline">In your corner. Challenging your thinking. Sharpening the blade.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Decommerce. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Exit Intent Popup -->
+    <div class="popup-overlay" id="exitPopup">
+        <div class="popup-container">
+            <button class="popup-close" id="popupClose" aria-label="Close popup">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+
+            <div id="popupContent">
+                <div class="popup-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                    </svg>
+                </div>
+
+                <h2 class="popup-title">Wait, before you go.</h2>
+                <p class="popup-subtitle">Every month, we share what's actually working in DTC right now. The AI tools worth using. The strategies driving results. The mistakes to avoid.</p>
+
+                <div class="popup-features">
+                    <span class="popup-feature">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                        Real insights, no fluff
+                    </span>
+                    <span class="popup-feature">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                        AI tools we're using
+                    </span>
+                    <span class="popup-feature">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                        Once a month
+                    </span>
+                </div>
+
+                <form class="popup-form" id="newsletterForm">
+                    <div class="popup-form-row">
+                        <input type="text" class="popup-input" id="firstName" name="firstName" placeholder="First name" required>
+                        <input type="text" class="popup-input" id="lastName" name="lastName" placeholder="Last name" required>
+                    </div>
+                    <input type="email" class="popup-input" id="email" name="email" placeholder="Your email address" required>
+                    <button type="submit" class="popup-submit" id="submitBtn">Get Monthly Insights</button>
+                </form>
+
+                <p class="popup-privacy">No spam. Unsubscribe anytime. We respect your inbox.</p>
+            </div>
+
+            <div id="popupSuccess" class="popup-success" style="display: none;">
+                <div class="popup-success-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"/>
+                    </svg>
+                </div>
+                <h3>You're in!</h3>
+                <p>Check your inbox for a confirmation. Welcome to the community.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Header show on scroll up, hide on scroll down
+        (function() {
+            const header = document.getElementById('header');
+            let lastScrollY = window.scrollY;
+            let ticking = false;
+
+            function updateHeader() {
+                const currentScrollY = window.scrollY;
+
+                // Add shadow when scrolled
+                if (currentScrollY > 10) {
+                    header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.08)';
+                } else {
+                    header.style.boxShadow = 'none';
+                }
+
+                // Show/hide based on scroll direction
+                // Always show header at the top of the page
+                if (currentScrollY < 100) {
+                    header.classList.remove('header-hidden');
+                } else if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                    // Scrolling down & past threshold - hide header
+                    header.classList.add('header-hidden');
+                } else if (currentScrollY < lastScrollY) {
+                    // Scrolling up - show header
+                    header.classList.remove('header-hidden');
+                }
+
+                lastScrollY = currentScrollY;
+                ticking = false;
+            }
+
+            window.addEventListener('scroll', function() {
+                if (!ticking) {
+                    window.requestAnimationFrame(updateHeader);
+                    ticking = true;
+                }
+            });
+        })();
+
+        // Exit Intent Popup
+        (function() {
+            const popup = document.getElementById('exitPopup');
+            const closeBtn = document.getElementById('popupClose');
+            const form = document.getElementById('newsletterForm');
+            const submitBtn = document.getElementById('submitBtn');
+            const popupContent = document.getElementById('popupContent');
+            const popupSuccess = document.getElementById('popupSuccess');
+
+            let popupShown = false;
+            const POPUP_DELAY = 3000; // Wait 3 seconds before allowing popup
+            let pageLoadTime = Date.now();
+
+            // Check if popup was already shown in this session
+            const popupDismissed = sessionStorage.getItem('exitPopupDismissed');
+            const popupSubmitted = localStorage.getItem('newsletterSubmitted');
+
+            // Show popup function
+            function showPopup() {
+                if (popupShown || popupDismissed || popupSubmitted) return;
+                if (Date.now() - pageLoadTime < POPUP_DELAY) return;
+
+                popupShown = true;
+                popup.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            // Hide popup function
+            function hidePopup() {
+                popup.classList.remove('active');
+                document.body.style.overflow = '';
+                sessionStorage.setItem('exitPopupDismissed', 'true');
+            }
+
+            // Exit intent detection (desktop - mouse leaves viewport)
+            document.addEventListener('mouseout', function(e) {
+                if (e.clientY <= 0 && e.relatedTarget === null) {
+                    showPopup();
+                }
+            });
+
+            // Mobile detection - show on scroll up after scrolling down significantly
+            let mobileScrollThreshold = 0;
+            let hasScrolledDown = false;
+
+            if ('ontouchstart' in window) {
+                window.addEventListener('scroll', function() {
+                    const currentScroll = window.scrollY;
+
+                    if (currentScroll > 500) {
+                        hasScrolledDown = true;
+                    }
+
+                    if (hasScrolledDown && currentScroll < mobileScrollThreshold - 200) {
+                        showPopup();
+                    }
+
+                    mobileScrollThreshold = currentScroll;
+                });
+            }
+
+            // Close popup handlers
+            closeBtn.addEventListener('click', hidePopup);
+
+            popup.addEventListener('click', function(e) {
+                if (e.target === popup) {
+                    hidePopup();
+                }
+            });
+
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && popup.classList.contains('active')) {
+                    hidePopup();
+                }
+            });
+
+            // Form submission
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                const firstName = document.getElementById('firstName').value.trim();
+                const lastName = document.getElementById('lastName').value.trim();
+                const email = document.getElementById('email').value.trim();
+
+                if (!firstName || !lastName || !email) return;
+
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Submitting...';
+
+                // Google Apps Script Web App URL
+                // You'll need to deploy the Apps Script and replace this URL
+                const GOOGLE_SCRIPT_URL = 'https://script.google.com/a/macros/decommerce.com/s/AKfycbxk-l44fPEXfXUgR2qttY913MqNIS1WKUSIo1b5F_8v_bj0TaaE6MeE1YDsWk10kXESTA/exec';
+
+                // Send data to Google Sheets
+                fetch(GOOGLE_SCRIPT_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        firstName: firstName,
+                        lastName: lastName,
+                        email: email,
+                        timestamp: new Date().toISOString(),
+                        source: 'exit-intent-popup'
+                    })
+                })
+                .then(() => {
+                    // Show success message
+                    popupContent.style.display = 'none';
+                    popupSuccess.style.display = 'block';
+                    localStorage.setItem('newsletterSubmitted', 'true');
+
+                    // Track conversion with Meta Pixel
+                    if (typeof fbq !== 'undefined') {
+                        fbq('track', 'Lead', {
+                            content_name: 'Newsletter Signup',
+                            content_category: 'Exit Intent Popup'
+                        });
+                    }
+
+                    // Auto-close after 3 seconds
+                    setTimeout(hidePopup, 3000);
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Get Monthly Insights';
+                    alert('Something went wrong. Please try again.');
+                });
+            });
+        })();
+    </script>
+</body>
+</html>
