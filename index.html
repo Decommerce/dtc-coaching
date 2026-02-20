@@ -342,6 +342,50 @@
             color: var(--text-primary);
         }
 
+        .hero-transformation {
+            font-size: 1.125rem;
+            color: var(--primary-purple);
+            font-weight: 600;
+            margin-bottom: 32px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-sparring {
+            padding: 24px;
+            background: var(--white);
+            border-radius: 12px;
+            border-left: 4px solid var(--primary-purple);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            margin-bottom: 32px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+        }
+
+        .hero-sparring .sparring-label {
+            font-size: 0.875rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .hero-sparring .sparring-question {
+            font-size: 1.125rem;
+            font-style: italic;
+            color: var(--primary-purple);
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        .hero-sparring .sparring-kicker {
+            font-size: 0.9375rem;
+            color: var(--text-secondary);
+            margin: 0;
+        }
+
         .hero-tagline {
             font-size: 1.125rem;
             font-weight: 600;
@@ -1191,6 +1235,18 @@
                 font-size: 1rem;
             }
 
+            .hero-transformation {
+                font-size: 1rem;
+            }
+
+            .hero-sparring {
+                padding: 20px;
+            }
+
+            .hero-sparring .sparring-question {
+                font-size: 1rem;
+            }
+
             .hero-tagline {
                 font-size: 1rem;
             }
@@ -1834,6 +1890,8 @@
                 <h1>You're buried in execution with no time to fix the system.</h1>
                 <p class="hero-subtitle">Agencies deliver excuses. Customers aren't coming back fast enough. You're juggling 47 priorities with no clarity on which ones actually matter. You need a co-founder who's been there — not another retainer.</p>
 
+                <p class="hero-transformation">In 90 days, you'll know exactly which levers move your business — and you'll stop paying for the ones that don't.</p>
+
                 <!-- Video Player -->
                 <div class="video-wrapper">
                     <iframe
@@ -1849,9 +1907,15 @@
 
                 <p class="hero-founders">We're <strong>Roy and Allan</strong>. We took our DTC brand TBô from $0 to $8M in 3 years and have delivered results for global brands. Now we work with <strong>2-3 DTC founders and e-commerce leaders at a time</strong> - helping you ask sharper questions, challenge your blind spots, and get more from the agencies and resources you're already paying for.</p>
 
+                <div class="hero-sparring">
+                    <p class="sparring-label">Here's a question we ask every founder in week one:</p>
+                    <p class="sparring-question">"Which of your agencies and team members are actually driving profit — and which ones are just reporting activity?"</p>
+                    <p class="sparring-kicker">Most founders pause. That pause is where we start.</p>
+                </div>
+
                 <div class="hero-cta-group">
                     <a href="https://calendly.com/roy-bernheim-decommerce/meeting-15-minutes" onclick="fbq('track', 'Lead');" class="btn btn-primary btn-large">Book a 15-Minute Call</a>
-                    <span class="cta-subtext">No pitch. Just a conversation about where you're stuck.</span>
+                    <span class="cta-subtext">15 minutes. We'll ask you one hard question. No deck, no pitch, no follow-up sequence.</span>
                 </div>
             </div>
         </div>
