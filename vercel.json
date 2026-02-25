@@ -1,12 +1,1 @@
-{
-  "rewrites": [
-    {
-      "source": "/v2",
-      "destination": "https://dtc-coaching-git-b-test-copy-variant-allan-ps-projects.vercel.app/"
-    },
-    {
-      "source": "/v2/:path*",
-      "destination": "https://dtc-coaching-git-b-test-copy-variant-allan-ps-projects.vercel.app/:path*"
-    }
-  ]
-}
+{}
