@@ -2495,9 +2495,9 @@
                         <input type="text" class="popup-input" id="ctaFirstName" name="firstName" placeholder="First name" required>
                         <input type="text" class="popup-input" id="ctaLastName" name="lastName" placeholder="Last name" required>
                     </div>
-                    <input type="tel" class="popup-input" id="ctaPhone" name="phone" placeholder="Phone number" required>
+                    <input type="tel" class="popup-input" id="ctaPhone" name="phone" placeholder="Phone incl. country code (e.g. +1)" required>
                     <input type="email" class="popup-input" id="ctaEmail" name="email" placeholder="Professional email" required>
-                    <input type="url" class="popup-input" id="ctaWebsite" name="website" placeholder="Your brand's website" required>
+                    <input type="text" class="popup-input" id="ctaWebsite" name="website" placeholder="Your brand's website (e.g. mybrand.com)" required>
                     <button type="submit" class="popup-submit" id="ctaSubmitBtn">Book Your Call</button>
                 </form>
 
@@ -2512,52 +2512,6 @@
                 </div>
                 <h3>We've got your details!</h3>
                 <p>Expect to hear from us within 24 hours to schedule your call.</p>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- CTA Lead Capture Popup -->
-    <div class="popup-overlay" id="ctaPopup">
-        <div class="popup-container">
-            <button class="popup-close" id="ctaPopupClose" aria-label="Close popup">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M6 18L18 6M6 6l12 12"/>
-                </svg>
-            </button>
-
-            <div id="ctaPopupContent">
-                <div class="popup-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
-                    </svg>
-                </div>
-
-                <h2 class="popup-title">Let's talk about where you're stuck.</h2>
-                <p class="popup-subtitle">Leave your details and we'll reach out within 24 hours to book your 15-minute call.</p>
-
-                <form class="popup-form" id="ctaForm">
-                    <div class="popup-form-row">
-                        <input type="text" class="popup-input" id="ctaFirstName" name="firstName" placeholder="First name" required>
-                        <input type="text" class="popup-input" id="ctaLastName" name="lastName" placeholder="Last name" required>
-                    </div>
-                    <input type="tel" class="popup-input" id="ctaPhone" name="phone" placeholder="Phone number" required>
-                    <input type="email" class="popup-input" id="ctaEmail" name="email" placeholder="Professional email" required>
-                    <input type="url" class="popup-input" id="ctaWebsite" name="website" placeholder="Your brand's website" required>
-                    <button type="submit" class="popup-submit" id="ctaSubmitBtn">Book Your Call</button>
-                </form>
-
-                <p class="popup-privacy">No spam. No follow-up sequence. We'll reach out to find a time.</p>
-            </div>
-
-            <div id="ctaPopupSuccess" class="popup-success" style="display: none;">
-                <div class="popup-success-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <polyline points="20 6 9 17 4 12"/>
-                    </svg>
-                </div>
-                <h3>We'll be in touch.</h3>
-                <p>Expect to hear from us within 24 hours to book your call.</p>
             </div>
         </div>
     </div>
@@ -2794,9 +2748,13 @@
                 const lastName = document.getElementById('ctaLastName').value.trim();
                 const phone = document.getElementById('ctaPhone').value.trim();
                 const email = document.getElementById('ctaEmail').value.trim();
-                const website = document.getElementById('ctaWebsite').value.trim();
+                let website = document.getElementById('ctaWebsite').value.trim();
 
                 if (!firstName || !lastName || !phone || !email || !website) return;
+
+                if (website && !website.match(/^https?:\/\//)) {
+                    website = 'https://' + website;
+                }
 
                 submitBtn.disabled = true;
                 submitBtn.textContent = 'Submitting...';
