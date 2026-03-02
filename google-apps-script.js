@@ -1,22 +1,24 @@
 /**
- * Google Apps Script for Newsletter Signup
+ * Google Apps Script for Lead Capture & Newsletter Signup
  *
  * SETUP INSTRUCTIONS:
  *
- * 1. Open your Google Sheet: https://docs.google.com/spreadsheets/d/1IkdCWzMDqTQ8N6yWjy8pwjvst7B-TOl5FSIhMkAYHKk/edit
+ * 1. Open your Google Sheet
+ *    - A-test: https://docs.google.com/spreadsheets/d/1IkdCWzMDqTQ8N6yWjy8pwjvst7B-TOl5FSIhMkAYHKk/edit
+ *    - B-test: https://docs.google.com/spreadsheets/d/10WElZR0Q2dpfYpFBUk3AcdW9VyQuhH5nhPoLnYsySZU/edit
  *
  * 2. Go to Extensions → Apps Script
  *
  * 3. Delete any existing code and paste this entire script
  *
- * 4. Save the project (give it a name like "Newsletter Signup Handler")
+ * 4. Save the project (give it a name like "Lead Capture Handler")
  *
  * 5. Click "Deploy" → "New deployment"
  *
  * 6. Click the gear icon next to "Select type" and choose "Web app"
  *
  * 7. Configure the deployment:
- *    - Description: "Newsletter Signup"
+ *    - Description: "Lead Capture"
  *    - Execute as: "Me"
  *    - Who has access: "Anyone"
  *
@@ -24,19 +26,20 @@
  *
  * 9. Copy the Web App URL (it looks like: https://script.google.com/macros/s/ABC123.../exec)
  *
- * 10. Replace 'YOUR_SCRIPT_ID' in the landing page HTML with this URL
- *     Find this line in the HTML:
- *     const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec';
- *
- *     Replace it with your actual URL:
- *     const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/ABC123.../exec';
+ * 10. Replace the GOOGLE_SCRIPT_URL in the landing page HTML with this URL
  *
  * 11. Make sure your Google Sheet has these column headers in row 1:
  *     A1: Timestamp
  *     B1: First Name
  *     C1: Last Name
  *     D1: Email
- *     E1: Source
+ *     E1: Phone
+ *     F1: Website
+ *     G1: Source
+ *
+ * NOTE: This script handles both CTA popup submissions (with phone + website)
+ *       and exit-intent newsletter signups (without phone + website).
+ *       Phone and Website columns will be empty for newsletter signups.
  */
 
 // Handle POST requests from the form
@@ -51,7 +54,7 @@ function doPost(e) {
 
     // Check if headers exist, if not add them
     if (sheet.getRange('A1').getValue() === '') {
-      sheet.getRange('A1:E1').setValues([['Timestamp', 'First Name', 'Last Name', 'Email', 'Source']]);
+      sheet.getRange('A1:G1').setValues([['Timestamp', 'First Name', 'Last Name', 'Email', 'Phone', 'Website', 'Source']]);
     }
 
     // Append the new row
@@ -60,6 +63,8 @@ function doPost(e) {
       data.firstName || '',
       data.lastName || '',
       data.email || '',
+      data.phone || '',
+      data.website || '',
       data.source || 'website'
     ]);
 
@@ -79,7 +84,7 @@ function doPost(e) {
 // Handle GET requests (for testing)
 function doGet(e) {
   return ContentService
-    .createTextOutput(JSON.stringify({ 'status': 'Newsletter signup endpoint is active' }))
+    .createTextOutput(JSON.stringify({ 'status': 'Lead capture endpoint is active' }))
     .setMimeType(ContentService.MimeType.JSON);
 }
 
@@ -89,6 +94,8 @@ function testAppend() {
     firstName: 'Test',
     lastName: 'User',
     email: 'test@example.com',
+    phone: '+1234567890',
+    website: 'https://example.com',
     timestamp: new Date().toISOString(),
     source: 'test'
   };
@@ -97,7 +104,7 @@ function testAppend() {
   var sheet = spreadsheet.getActiveSheet();
 
   if (sheet.getRange('A1').getValue() === '') {
-    sheet.getRange('A1:E1').setValues([['Timestamp', 'First Name', 'Last Name', 'Email', 'Source']]);
+    sheet.getRange('A1:G1').setValues([['Timestamp', 'First Name', 'Last Name', 'Email', 'Phone', 'Website', 'Source']]);
   }
 
   sheet.appendRow([
@@ -105,6 +112,8 @@ function testAppend() {
     testData.firstName,
     testData.lastName,
     testData.email,
+    testData.phone,
+    testData.website,
     testData.source
   ]);
 

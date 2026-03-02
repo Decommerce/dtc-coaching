@@ -1878,7 +1878,7 @@
                 <a href="#" class="logo-text">
                     <img src="logos/decommerce.png" alt="Decommerce" style="height: 40px; width: auto;">
                 </a>
-                <a href="https://calendly.com/roy-bernheim-decommerce/meeting-15-minutes" onclick="fbq('track', 'Lead');" class="btn btn-primary btn-small">Book a Call</a>
+                <button onclick="openCtaPopup();" class="btn btn-primary btn-small">Book a Call</button>
             </div>
         </div>
     </header>
@@ -1914,7 +1914,7 @@
                 </div>
 
                 <div class="hero-cta-group">
-                    <a href="https://calendly.com/roy-bernheim-decommerce/meeting-15-minutes" onclick="fbq('track', 'Lead');" class="btn btn-primary btn-large">Book a 15-Minute Call</a>
+                    <button onclick="openCtaPopup();" class="btn btn-primary btn-large">Book a 15-Minute Call</button>
                     <span class="cta-subtext">15 minutes. We'll ask you one hard question. No deck, no pitch, no follow-up sequence.</span>
                 </div>
             </div>
@@ -2177,7 +2177,7 @@
 
                 <div class="benefit-card" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: var(--light-lavender);">
                     <p style="font-size: 1.125rem; color: var(--text-primary); margin-bottom: 16px;">See if this makes sense for where you are right now.</p>
-                    <a href="https://calendly.com/roy-bernheim-decommerce/meeting-15-minutes" onclick="fbq('track', 'Lead');" class="btn btn-primary">Book a 15-Minute Call</a>
+                    <button onclick="openCtaPopup();" class="btn btn-primary">Book a 15-Minute Call</button>
                 </div>
             </div>
         </div>
@@ -2329,7 +2329,7 @@
                     <div class="pricing-best-for">
                         <p><strong>Best for:</strong> Founders who want a long-term sparring partner while continuing to operate their business.</p>
                     </div>
-                    <a href="https://calendly.com/roy-bernheim-decommerce/meeting-15-minutes" onclick="fbq('track', 'Lead');" class="btn btn-primary">Book a Call</a>
+                    <button onclick="openCtaPopup();" class="btn btn-primary">Book a Call</button>
                 </div>
 
                 <div class="pricing-card">
@@ -2370,7 +2370,7 @@
                     <div class="pricing-best-for">
                         <p><strong>Best for:</strong> Founders who want concentrated momentum and a clear operating plan for the next phase.</p>
                     </div>
-                    <a href="https://calendly.com/roy-bernheim-decommerce/meeting-15-minutes" onclick="fbq('track', 'Lead');" class="btn btn-secondary">Book a Call</a>
+                    <button onclick="openCtaPopup();" class="btn btn-secondary">Book a Call</button>
                 </div>
             </div>
 
@@ -2470,7 +2470,7 @@
         <div class="container">
             <h2>Ready to stop guessing?</h2>
             <p class="final-cta-subtitle">15 minutes. No pitch. Just a conversation about where you're stuck and whether we can help.</p>
-            <a href="https://calendly.com/roy-bernheim-decommerce/meeting-15-minutes" onclick="fbq('track', 'Lead');" class="btn btn-primary btn-large">Book Your 15-Minute Call</a>
+            <button onclick="openCtaPopup();" class="btn btn-primary btn-large">Book Your 15-Minute Call</button>
             <p class="final-cta-tagline">We're not an agency. <strong>We're founders who work with founders.</strong></p>
             <p class="final-cta-tagline">In your corner. Challenging your thinking. Sharpening the blade.</p>
         </div>
@@ -2537,6 +2537,46 @@
                 </div>
                 <h3>You're in!</h3>
                 <p>Check your inbox for a confirmation. Welcome to the community.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Lead Capture Popup -->
+    <div class="popup-overlay" id="ctaPopup">
+        <div class="popup-container">
+            <button class="popup-close" id="ctaPopupClose" aria-label="Close popup">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+
+            <div id="ctaPopupContent">
+                <div class="popup-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+                <h2 class="popup-title">Let's talk about where you're stuck.</h2>
+                <p class="popup-subtitle">Leave your details and we'll reach out within 24 hours to book your 15-minute call.</p>
+
+                <form class="popup-form" id="ctaForm">
+                    <div class="popup-form-row">
+                        <input type="text" class="popup-input" id="ctaFirstName" name="firstName" placeholder="First name" required>
+                        <input type="text" class="popup-input" id="ctaLastName" name="lastName" placeholder="Last name" required>
+                    </div>
+                    <input type="tel" class="popup-input" id="ctaPhone" name="phone" placeholder="Phone number" required>
+                    <input type="email" class="popup-input" id="ctaEmail" name="email" placeholder="Professional email" required>
+                    <input type="url" class="popup-input" id="ctaWebsite" name="website" placeholder="Your brand's website" required>
+                    <button type="submit" class="popup-submit" id="ctaSubmitBtn">Book Your Call</button>
+                </form>
+
+                <p class="popup-privacy">No spam. No follow-up sequence. We'll reach out to find a time.</p>
+            </div>
+
+            <div id="ctaPopupSuccess" class="popup-success" style="display: none;">
+                <div class="popup-success-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"/>
+                    </svg>
+                </div>
+                <h3>We'll be in touch.</h3>
+                <p>Expect to hear from us within 24 hours to book your call.</p>
             </div>
         </div>
     </div>
@@ -2721,6 +2761,100 @@
                     console.error('Error:', error);
                     submitBtn.disabled = false;
                     submitBtn.textContent = 'Get Monthly Insights';
+                    alert('Something went wrong. Please try again.');
+                });
+            });
+        })();
+
+        // CTA Lead Capture Popup
+        function openCtaPopup() {
+            const popup = document.getElementById('ctaPopup');
+            document.getElementById('ctaPopupContent').style.display = '';
+            document.getElementById('ctaPopupSuccess').style.display = 'none';
+            document.getElementById('ctaForm').reset();
+            document.getElementById('ctaSubmitBtn').disabled = false;
+            document.getElementById('ctaSubmitBtn').textContent = 'Book Your Call';
+            popup.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeCtaPopup() {
+            const popup = document.getElementById('ctaPopup');
+            popup.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        (function() {
+            const popup = document.getElementById('ctaPopup');
+            const closeBtn = document.getElementById('ctaPopupClose');
+            const form = document.getElementById('ctaForm');
+            const submitBtn = document.getElementById('ctaSubmitBtn');
+            const popupContent = document.getElementById('ctaPopupContent');
+            const popupSuccess = document.getElementById('ctaPopupSuccess');
+
+            closeBtn.addEventListener('click', closeCtaPopup);
+
+            popup.addEventListener('click', function(e) {
+                if (e.target === popup) {
+                    closeCtaPopup();
+                }
+            });
+
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && popup.classList.contains('active')) {
+                    closeCtaPopup();
+                }
+            });
+
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                const firstName = document.getElementById('ctaFirstName').value.trim();
+                const lastName = document.getElementById('ctaLastName').value.trim();
+                const phone = document.getElementById('ctaPhone').value.trim();
+                const email = document.getElementById('ctaEmail').value.trim();
+                const website = document.getElementById('ctaWebsite').value.trim();
+
+                if (!firstName || !lastName || !phone || !email || !website) return;
+
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Submitting...';
+
+                const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwxGrF0ArCQn6HG9v0kM03aqc-pSytLxXnKAnnTPJK6nU3tUvRah_y0mAblYRgopnfuNg/exec';
+
+                fetch(GOOGLE_SCRIPT_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        firstName: firstName,
+                        lastName: lastName,
+                        phone: phone,
+                        email: email,
+                        website: website,
+                        timestamp: new Date().toISOString(),
+                        source: 'cta-popup'
+                    })
+                })
+                .then(() => {
+                    popupContent.style.display = 'none';
+                    popupSuccess.style.display = 'block';
+
+                    if (typeof fbq !== 'undefined') {
+                        fbq('track', 'Lead', {
+                            content_name: 'CTA Form Submission',
+                            content_category: 'CTA Popup'
+                        });
+                    }
+
+                    setTimeout(closeCtaPopup, 3000);
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Book Your Call';
                     alert('Something went wrong. Please try again.');
                 });
             });
