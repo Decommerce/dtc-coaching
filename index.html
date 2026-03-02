@@ -2846,6 +2846,9 @@
                     popupContent.style.display = 'none';
                     popupSuccess.style.display = 'block';
 
+                    // Suppress exit-intent popup for this session
+                    sessionStorage.setItem('exitPopupDismissed', 'true');
+
                     if (typeof fbq !== 'undefined') {
                         fbq('track', 'Lead', {
                             content_name: 'CTA Form Submission',
