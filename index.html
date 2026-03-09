@@ -2759,10 +2759,8 @@
                 submitBtn.disabled = true;
                 submitBtn.textContent = 'Submitting...';
 
-                // TODO: Replace with your new Google Apps Script URL for the playbook Google Sheet
-                const GOOGLE_SCRIPT_URL = 'APPS_SCRIPT_URL_HERE';
-                // TODO: Replace with your Docsend link for the AI playbook PDF
-                const DOCSEND_URL = 'DOCSEND_URL_HERE';
+                const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyWlBd53hfGVySoOdEXmKeKkH2RRIvTDteTe3yKHCPpNK1ptvCoaRe549cQxXFaAUj4/exec';
+                const DOCSEND_URL = 'https://docsend.com/view/sq6n98m35k7jrcmq';
 
                 fetch(GOOGLE_SCRIPT_URL, {
                     method: 'POST',
