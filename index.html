@@ -2120,7 +2120,7 @@
                         <input type="text" class="popup-input" id="firstName" name="firstName" placeholder="First name" required>
                         <input type="text" class="popup-input" id="lastName" name="lastName" placeholder="Last name" required>
                     </div>
-                    <input type="email" class="popup-input" id="email" name="email" placeholder="Your email address" required>
+                    <input type="email" class="popup-input" id="email" name="email" placeholder="Professional email" required>
                     <button type="submit" class="popup-submit" id="submitBtn">Get Monthly Insights</button>
                 </form>
 
@@ -2157,9 +2157,9 @@
                         <input type="text" class="popup-input" id="ctaFirstName" name="firstName" placeholder="First name" required>
                         <input type="text" class="popup-input" id="ctaLastName" name="lastName" placeholder="Last name" required>
                     </div>
-                    <input type="tel" class="popup-input" id="ctaPhone" name="phone" placeholder="Phone incl. country code (e.g. +1)" required>
+                    <input type="tel" class="popup-input" id="ctaPhone" name="phone" placeholder="Phone incl. country code (e.g. +1) — optional">
                     <input type="email" class="popup-input" id="ctaEmail" name="email" placeholder="Professional email" required>
-                    <input type="text" class="popup-input" id="ctaWebsite" name="website" placeholder="Your brand's website (e.g. mybrand.com)" required>
+                    <input type="text" class="popup-input" id="ctaComment" name="comment" placeholder="Any question or comment? (optional)">
                     <button type="submit" class="popup-submit" id="ctaSubmitBtn">Get the Playbook</button>
                 </form>
 
@@ -2410,13 +2410,9 @@
                 const lastName = document.getElementById('ctaLastName').value.trim();
                 const phone = document.getElementById('ctaPhone').value.trim();
                 const email = document.getElementById('ctaEmail').value.trim();
-                let website = document.getElementById('ctaWebsite').value.trim();
+                const comment = document.getElementById('ctaComment').value.trim();
 
-                if (!firstName || !lastName || !phone || !email || !website) return;
-
-                if (website && !website.match(/^https?:\/\//)) {
-                    website = 'https://' + website;
-                }
+                if (!firstName || !lastName || !email) return;
 
                 submitBtn.disabled = true;
                 submitBtn.textContent = 'Submitting...';
@@ -2435,7 +2431,7 @@
                         lastName: lastName,
                         phone: phone,
                         email: email,
-                        website: website,
+                        comment: comment,
                         timestamp: new Date().toISOString(),
                         source: 'playbook-download'
                     })
