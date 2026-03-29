@@ -439,7 +439,10 @@
         }
 
         .problem-list {
-            max-width: 800px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            max-width: 960px;
             margin: 0 auto 48px;
         }
 
@@ -447,20 +450,24 @@
             display: flex;
             align-items: flex-start;
             gap: 16px;
-            padding: 20px 0;
-            border-bottom: 1px solid var(--border-light);
+            padding: 28px 24px;
+            background: #FFF5F5;
+            border: 2px solid #FFD4D4;
+            border-radius: 16px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
-        .problem-item:last-child {
-            border-bottom: none;
+        .problem-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(220, 53, 69, 0.12);
         }
 
         .problem-icon {
             flex-shrink: 0;
-            width: 24px;
-            height: 24px;
-            background: linear-gradient(135deg, #FFE5E5 0%, #FFF0E5 100%);
-            border-radius: 6px;
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #FF6B6B 0%, #EE5A24 100%);
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -468,15 +475,18 @@
         }
 
         .problem-icon svg {
-            width: 14px;
-            height: 14px;
-            stroke: var(--accent-red);
+            width: 26px;
+            height: 26px;
+            stroke: #fff;
+            stroke-width: 2.5;
         }
 
         .problem-item p {
             font-size: 1.0625rem;
-            color: var(--text-secondary);
+            line-height: 1.6;
+            color: var(--text-primary);
             margin: 0;
+            font-weight: 500;
         }
 
         .problem-conclusion {
@@ -1274,8 +1284,12 @@
                 padding: 50px 0;
             }
 
+            .problem-list {
+                grid-template-columns: 1fr;
+            }
+
             .problem-item {
-                padding: 16px 0;
+                padding: 20px 18px;
             }
 
             .problem-item p {
@@ -1902,7 +1916,7 @@
                             <path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
                         </svg>
                     </div>
-                    <p>You spend thousands per photoshoot, wait weeks for edits, burn through 20 images in days, and start over.</p>
+                    <p>You spend thousands on agencies and photoshoots, wait weeks for edits, burn through 20 images in days, and start over.</p>
                 </div>
                 <div class="problem-item">
                     <div class="problem-icon">
