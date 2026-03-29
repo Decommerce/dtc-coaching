@@ -439,46 +439,27 @@
         }
 
         .problem-list {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            max-width: 960px;
+            max-width: 720px;
             margin: 0 auto 48px;
+            background: #FFF5F5;
+            border: 2px solid #FFD4D4;
+            border-radius: 16px;
+            padding: 32px 36px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
         }
 
         .problem-item {
             display: flex;
-            align-items: flex-start;
-            gap: 16px;
-            padding: 28px 24px;
-            background: #FFF5F5;
-            border: 2px solid #FFD4D4;
-            border-radius: 16px;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .problem-item:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(220, 53, 69, 0.12);
+            align-items: baseline;
+            gap: 14px;
         }
 
         .problem-icon {
             flex-shrink: 0;
-            width: 48px;
-            height: 48px;
-            background: linear-gradient(135deg, #FF6B6B 0%, #EE5A24 100%);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 2px;
-        }
-
-        .problem-icon svg {
-            width: 26px;
-            height: 26px;
-            stroke: #fff;
-            stroke-width: 2.5;
+            font-size: 1.25rem;
+            line-height: 1;
         }
 
         .problem-item p {
@@ -486,7 +467,6 @@
             line-height: 1.6;
             color: var(--text-primary);
             margin: 0;
-            font-weight: 500;
         }
 
         .problem-conclusion {
@@ -1285,11 +1265,7 @@
             }
 
             .problem-list {
-                grid-template-columns: 1fr;
-            }
-
-            .problem-item {
-                padding: 20px 18px;
+                padding: 24px 20px;
             }
 
             .problem-item p {
@@ -1903,35 +1879,19 @@
 
             <div class="problem-list">
                 <div class="problem-item">
-                    <div class="problem-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
-                        </svg>
-                    </div>
+                    <span class="problem-icon" style="color: #E53E3E;">&#x2717;</span>
                     <p>Your CS team costs $10K+/month and has never generated a single dollar of revenue.</p>
                 </div>
                 <div class="problem-item">
-                    <div class="problem-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
-                        </svg>
-                    </div>
+                    <span class="problem-icon" style="color: #E53E3E;">&#x2717;</span>
                     <p>You spend thousands on agencies and photoshoots, wait weeks for edits, burn through 20 images in days, and start over.</p>
                 </div>
                 <div class="problem-item">
-                    <div class="problem-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
-                        </svg>
-                    </div>
+                    <span class="problem-icon" style="color: #E53E3E;">&#x2717;</span>
                     <p>You know AI could help — but everything you've tried felt gimmicky or vague.</p>
                 </div>
                 <div class="problem-item">
-                    <div class="problem-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
-                        </svg>
-                    </div>
+                    <span class="problem-icon" style="color: #E53E3E;">&#x2717;</span>
                     <p>Half your week disappears into repetitive tasks — emails, content planning, inventory checks, reporting — that drain your energy and keep you from the work that actually grows the business.</p>
                 </div>
             </div>
